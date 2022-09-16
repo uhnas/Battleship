@@ -79,8 +79,6 @@ bool getLineWithTwoIntegers(int& r, int& c)
     return result;
 }
 
-// TODO:  You need to replace this with a real class declaration and
-//        implementation.
 class HumanPlayer : public Player
 {
   public:
@@ -237,8 +235,7 @@ void HumanPlayer :: recordAttackByOpponent(Point p)
 //  MediocrePlayer
 //*********************************************************************
 
-// TODO:  You need to replace this with a real class declaration and
-//        implementation.
+
 
 class MediocrePlayer : public Player
 {
@@ -480,8 +477,6 @@ void MediocrePlayer :: recordAttackResult(Point p, bool validShot, bool shotHit,
 //  GoodPlayer
 //*********************************************************************
 
-// TODO:  You need to replace this with a real class declaration and
-//        implementation.
 class GoodPlayer : public Player
 {
   public:
@@ -571,7 +566,7 @@ bool GoodPlayer :: placeShipsHelper(int shipId, Board& b)
                    b.unplaceShip(Point(i,j), shipId, VERTICAL);
                }
             }
-            // verical placing ends
+            // vertical placing ends
         }
     }
     return false;
