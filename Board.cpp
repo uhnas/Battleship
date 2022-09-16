@@ -19,8 +19,6 @@ class BoardImpl
     bool allShipsDestroyed() const;
 
   private:
-      // TODO:  Decide what private members you need.  Here's one that's likely
-      //        to be useful:
     int mRows;
     int mCols;
     char m_display[MAXROWS][MAXCOLS];
@@ -49,7 +47,6 @@ BoardImpl::BoardImpl(const Game& g)
             m_display[i][j] = '.';
         }
     }
-    // This compiles, but may not be correct
 }
 
 
@@ -62,7 +59,6 @@ void BoardImpl::clear()
             m_display[i][j] = '.';
         }
     
-    // This compiles, but may not be correct
 }
 
 void BoardImpl::block()
@@ -80,7 +76,7 @@ void BoardImpl::block()
             counter++;
         }
     }
-    // TODO:  Replace this with code to block half of the cells on the board
+    // block half of the cells on the board
 }
 
 void BoardImpl::unblock()
@@ -93,7 +89,7 @@ void BoardImpl::unblock()
                 m_display[i][j] = '.';
             }
         }
-    // TODO:  Replace this with code to unblock all blocked cells
+    // unblock all blocked cells
 }
 
 //void BoardImpl::block()
@@ -103,7 +99,7 @@ void BoardImpl::unblock()
 //        for (int c = 0; c < m_game.cols(); c++)
 //            if (randInt(2) == 0)
 //            {
-//                ; // TODO:  Replace this with code to block cell (r,c)
+//                ;
 //            }
 //}
 //
@@ -112,7 +108,7 @@ void BoardImpl::unblock()
 //    for (int r = 0; r < m_game.rows(); r++)
 //        for (int c = 0; c < m_game.cols(); c++)
 //        {
-//            ; // TODO:  Replace this with code to unblock cell (r,c) if blocked
+//            ; 
 //        }
 //}
 
@@ -302,7 +298,7 @@ bool BoardImpl::unplaceShip(Point topOrLeft, int shipId, Direction dir)
     }
     m_boardShips.erase(m_boardShips.begin() + shipId);
     
-    return true; // This compiles, but may not be correct
+    return true; 
 }
 
 void BoardImpl::display(bool shotsOnly) const
@@ -338,7 +334,6 @@ void BoardImpl::display(bool shotsOnly) const
         }
         cout << endl;
     }
-    // This compiles, but may not be correct
 }
 
 bool BoardImpl::attack(Point p, bool& shotHit, bool& shipDestroyed, int& shipId)
@@ -407,7 +402,7 @@ bool BoardImpl::attack(Point p, bool& shotHit, bool& shipDestroyed, int& shipId)
         return true;
     }
     
-    return true; // This compiles, but may not be correct
+    return true; 
 }
 
 bool BoardImpl::allShipsDestroyed() const
@@ -425,8 +420,7 @@ bool BoardImpl::allShipsDestroyed() const
 
 //******************** Board functions ********************************
 
-// These functions simply delegate to BoardImpl's functions.
-// You probably don't want to change any of this code.
+// These functions delegate to BoardImpl's functions.
 
 Board::Board(const Game& g)
 {
