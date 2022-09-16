@@ -45,19 +45,18 @@ void waitForEnter()
 
 GameImpl::GameImpl(int nRows, int nCols)
 {
-    // This compiles but may not be correct
     mRows = nRows;
     mCols = nCols;
 }
 
 int GameImpl::rows() const
 {
-    return mRows;  // This compiles but may not be correct
+    return mRows;  
 }
 
 int GameImpl::cols() const
 {
-    return mCols;  // This compiles but may not be correct
+    return mCols;  
 }
 
 bool GameImpl::isValid(Point p) const
@@ -99,7 +98,7 @@ bool GameImpl::addShip(int length, char symbol, string name)
     nship.shipsymbol = symbol;
     nship.shipname = name;
     m_ships.push_back(nship);
-    return true;  // This compiles but may not be correct
+    return true;  
     }
     return false;
 }
@@ -108,25 +107,25 @@ int GameImpl::nShips() const
 {
     int total = m_ships.size();
     
-    return total;  // This compiles but may not be correct
+    return total;  
 }
 
 int GameImpl::shipLength(int shipId) const
 {
     int len = m_ships[shipId].shiplen;
-    return len;  // This compiles but may not be correct
+    return len;  
 }
 
 char GameImpl::shipSymbol(int shipId) const
 {
     char sym = m_ships[shipId].shipsymbol;
-    return sym;  // This compiles but may not be correct
+    return sym;  
 }
 
 string GameImpl::shipName(int shipId) const
 {
     string nam = m_ships[shipId].shipname;
-    return nam;  // This compiles but may not be correct
+    return nam;  
 }
 
 Player* GameImpl::play(Player* p1, Player* p2, Board& b1, Board& b2, bool shouldPause)
@@ -231,15 +230,14 @@ Player* GameImpl::play(Player* p1, Player* p2, Board& b1, Board& b2, bool should
         cout << p1->name() << " wins!" << endl;
         return p1;
     }
-    return nullptr;  // This compiles but may not be correct
+    return nullptr;  
 }
 
 
 
 //******************** Game functions *******************************
 
-// These functions for the most part simply delegate to GameImpl's functions.
-// You probably don't want to change any of the code from this point down.
+// These functions for the most part delegate to GameImpl's functions.
 
 Game::Game(int nRows, int nCols)
 {
